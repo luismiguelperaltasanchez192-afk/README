@@ -1,0 +1,66 @@
+#include <iostream>
+#include <vector>
+#include <string>
+
+using namespace std;
+
+// Definir la estructura Producto
+struct Producto
+{
+    string nombre;
+    float precio;
+};
+
+int main()
+{
+    // Crear el vector de productos
+    vector<Producto> inventario;
+
+    // Agregar al menos 4 productos
+    inventario.push_back({"Cuaderno", 45.50});
+    inventario.push_back({"Lápiz", 15.00});
+    inventario.push_back({"Borrador", 10.25});
+    inventario.push_back({"Mochila", 850.75});
+
+    // Mostrar el inventario
+    cout << "=== INVENTARIO ===" << endl;
+
+    for (Producto p : inventario)
+    {
+        cout << "Producto: " << p.nombre
+             << " - Precio: RD$ " << p.precio << endl;
+    }
+
+    // Modificar el precio del segundo producto (índice 1)
+    inventario[1].precio = 18.50;
+
+    cout << "\nPrecio modificado correctamente.\n";
+
+    // Mostrar nuevamente el inventario
+    cout << "\n=== INVENTARIO ACTUALIZADO ===" << endl;
+
+    for (Producto p : inventario)
+    {
+        cout << "Producto: " << p.nombre
+             << " - Precio: RD$ " << p.precio << endl;
+    }
+
+    // Calcular el precio promedio
+    float suma = 0;
+
+    for (Producto p : inventario)
+    {
+        suma += p.precio;
+    }
+
+    float promedio = suma / inventario.size();
+
+    cout << "\nPrecio promedio: RD$ " << promedio << endl;
+
+    // Acceder de forma segura con at()
+    cout << "\nPrimer producto usando at():" << endl;
+    cout << inventario.at(0).nombre
+         << " - RD$ " << inventario.at(0).precio << endl;
+
+    return 0;
+}
