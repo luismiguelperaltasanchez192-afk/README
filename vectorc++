@@ -1,0 +1,69 @@
+# Inventario con Vector de Objetos (Struct)
+
+## Descripción
+
+Este programa fue desarrollado en C++ y tiene como objetivo gestionar un inventario utilizando un **vector de objetos** (`vector<Producto>`). Cada producto se almacena en una estructura (`struct`) que contiene su nombre y su precio.
+
+En lugar de utilizar dos vectores separados para nombres y precios, se emplea un único vector de estructuras, lo que facilita la organización y el manejo de los datos.
+
+## Estructura utilizada
+
+```cpp
+struct Producto
+{
+    string nombre;
+    float precio;
+};
+```
+
+## Funcionalidades
+
+- Crear una estructura `Producto`.
+- Crear un `vector<Producto>` para almacenar los productos.
+- Agregar productos utilizando `push_back()`.
+- Mostrar el nombre y precio de cada producto.
+- Modificar el precio de un producto mediante su índice.
+- Calcular el precio promedio de todos los productos.
+- Acceder a un producto utilizando `at()`.
+
+## Productos del inventario
+
+| Producto | Precio (RD$) |
+|----------|-------------:|
+| Cuaderno | 45.50 |
+| Lápiz | 15.00 |
+| Borrador | 10.25 |
+| Mochila | 850.75 |
+
+> Durante la ejecución se modifica el precio del **Lápiz** de **RD$15.00** a **RD$18.50** como ejemplo de actualización de datos.
+
+## Tecnologías utilizadas
+
+- Lenguaje: C++
+- Biblioteca `<iostream>`
+- Biblioteca `<vector>`
+- Biblioteca `<string>`
+
+## Cómo ejecutar
+
+1. Abrir el proyecto en Visual Studio.
+2. Compilar el programa.
+3. Ejecutar el proyecto.
+4. Observar en la consola el inventario, la modificación del precio y el cálculo del promedio.
+
+## Resultado esperado
+
+El programa mostrará:
+
+- La lista inicial de productos.
+- La actualización del precio de un producto.
+- El inventario actualizado.
+- El precio promedio de todos los productos.
+- El acceso al primer producto utilizando `at()`.
+foto prueba 
+
+
+## Autor
+
+**Luis Miguel Peralta Sánchez**  
+Ingeniería en Ciberseguridad
