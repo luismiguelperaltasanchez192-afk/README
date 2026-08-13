@@ -60,9 +60,7 @@ El programa mostrará:
 - El inventario actualizado.
 - El precio promedio de todos los productos.
 - El acceso al primer producto utilizando `at()`.
-foto prueba 
-
-
+ 
 ## Autor
 
 **Luis Miguel Peralta Sánchez**  
